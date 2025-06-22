@@ -97,18 +97,22 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-8">
-                <Button asChild className="bg-red-600 hover:bg-red-700 text-white border-none">
-                  <Link to="/projects" className="flex items-center">
-                    View Projects
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </Button>
-                <Button className="bg-red-600 hover:bg-red-700 text-white border-none">
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Resume
-                </Button>
-              </div>
+             <div className="flex flex-col sm:flex-row gap-4 pt-8">
+  <Button asChild className="bg-red-600 hover:bg-red-700 text-white border-none">
+    <Link to="/projects" className="flex items-center">
+      View Projects
+      <ArrowRight className="w-4 h-4 ml-2" />
+    </Link>
+  </Button>
+
+  <a href="/SuryaResume_DataScienceGrad.pdf" download className="w-fit">
+    <Button className="bg-red-600 hover:bg-red-700 text-white border-none">
+      <Download className="w-4 h-4 mr-2" />
+      Download Resume
+    </Button>
+  </a>
+</div>
+
 
               {/* Contact Links */}
               <div className="flex space-x-6 pt-4">
@@ -141,9 +145,7 @@ const Home = () => {
 </p>
 <br />
 <p>
-  I started my journey blending <strong>code</strong> and <strong>curiosity</strong> — turning raw information into tools that
-  predict fraud, personalize outreach, and visualize impact. Whether it's an LLM-powered email generator
-  or a real-time anomaly detector, I care about solving real-world problems through clean, scalable solutions.
+  I started my journey blending code and curiosity — turning raw information into insights, interactions, and impact. Whether it's building helpful tools or uncovering hidden patterns, I care about solving real-world problems through clean, scalable solutions.
 </p>
 <br />
 <p>

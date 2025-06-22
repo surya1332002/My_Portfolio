@@ -62,10 +62,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 {item.name}
               </Link>
             ))}
-            <Button size="sm" className="ml-6 bg-red-600 hover:bg-red-700 text-white">
-              <Download className="w-4 h-4 mr-2" />
-              Resume
-            </Button>
+            <a
+  href="/SuryaResume_DataScienceGrad.pdf"
+  download
+  className="ml-6"
+>
+  <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white">
+    <Download className="w-4 h-4 mr-2" />
+    Resume
+  </Button>
+</a>
+
           </div>
 
           {/* Mobile Navigation */}
@@ -89,10 +96,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     {item.name}
                   </Link>
                 ))}
-                <Button className="mt-6 bg-red-600 hover:bg-red-700 text-white w-fit">
-                  <Download className="w-4 h-4 mr-2" />
-                  Resume
-                </Button>
+                <a
+  href="/SuryaResume_DataScienceGrad.pdf"
+  download
+  className="mt-6 w-fit"
+>
+  <Button className="bg-red-600 hover:bg-red-700 text-white">
+    <Download className="w-4 h-4 mr-2" />
+    Resume
+  </Button>
+</a>
+
               </div>
             </SheetContent>
           </Sheet>

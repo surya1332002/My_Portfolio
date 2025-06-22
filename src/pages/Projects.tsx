@@ -17,7 +17,7 @@ const Projects = () => {
       category: "ML Engineering",
       metrics: ["97% fraud detection accuracy", "40% reduction in false positives", "Real-time processing"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-      githubUrl: "#",
+      githubUrl: "https://github.com/surya1332002/Financial-Risk-Customer-Analytics-Platform",
       liveUrl: "#"
     },
     {
@@ -28,7 +28,7 @@ const Projects = () => {
       category: "Data Analytics",
       metrics: ["45+ features analyzed", "85% sentiment accuracy", "20% insight improvement"],
       image: "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1750358193/final_1_hlakno.jpg",
-      githubUrl: "#",
+      githubUrl: "https://github.com/surya1332002/Disneyland-Review-Analysis-Using-NLP-Tableau-",
       liveUrl: "#"
     },
     {
@@ -39,7 +39,7 @@ const Projects = () => {
       category: "Generative AI",
       metrics: ["95% relevance score", "60% response rate improvement", "500+ emails generated"],
       image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=500&h=300&fit=crop",
-      githubUrl: "#",
+      githubUrl: "https://github.com/surya1332002/Generative-AI-Cold-Email-Generator",
       liveUrl: "#"
     },
     {
@@ -50,7 +50,7 @@ const Projects = () => {
       category: "Recommendation Systems",
       metrics: ["100% top-5 hit rate", "MovieLens-20M dataset", "Interactive dashboard"],
       image: "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1750315806/0_BIJL7Ue0fMQqxd_d_x68cug.png",
-      githubUrl: "#",
+      githubUrl: "https://github.com/surya1332002/Movie-Recommendation-System-Using-Collaborative-Filtering-and-KNN-Recommendation-",
       liveUrl: "#"
     },
     {
@@ -61,7 +61,7 @@ const Projects = () => {
       category: "Computer Vision",
       metrics: ["30% faster frame processing", "89.2% foreground detection accuracy"],
       image: "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1750359987/ChatGPT_Image_Jun_19_2025_01_59_56_PM_ln4fgl.png",
-      githubUrl: "#",
+      githubUrl: "https://github.com/surya1332002/Background-Subtraction-System-for-Real-Time-Video-Streams",
       liveUrl: "#"
     },
     {
@@ -72,7 +72,7 @@ const Projects = () => {
       category: "Deep Learning",
       metrics: ["91% precision", "2000+ satellite images", "Early risk detection"],
       image: "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1750359988/ChatGPT_Image_Jun_19_2025_02_04_08_PM_echb3d.png",
-      githubUrl: "#",
+      githubUrl: "https://github.com/surya1332002/Binary-Image-Classification-System-to-Identify-Oil-Spills-in-Ocean-Imagery",
       liveUrl: "#"
     },
     {
@@ -83,7 +83,7 @@ const Projects = () => {
       category: "Healthcare AI",
       metrics: ["96% accuracy", "Real-time species and allergy identification"],
       image: "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1750359989/ChatGPT_Image_Jun_19_2025_02_04_02_PM_te3fup.png",
-      githubUrl: "#",
+      githubUrl: "https://ieeexplore.ieee.org/document/10084124",
       liveUrl: "#"
     },
     {
@@ -94,7 +94,7 @@ const Projects = () => {
       category: "Web Development",
       metrics: ["Custom UI for men", "Complete product catalog integration"],
       image: "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1750359989/ChatGPT_Image_Jun_19_2025_02_04_26_PM_xij9jp.png",
-      githubUrl: "#",
+      githubUrl: "https://github.com/surya1332002/The_Loop_eCommerceWebsite#",
       liveUrl: "#"
     },
     {
@@ -105,7 +105,7 @@ const Projects = () => {
       category: "Machine Learning",
       metrics: ["71.5% classification accuracy", "Multi-class bean type prediction"],
       image: "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1750359990/ChatGPT_Image_Jun_19_2025_02_06_02_PM_njtdnf.png",
-      githubUrl: "#",
+      githubUrl: "https://github.com/surya1332002/dry_bean_dataset_using_logistic_regression#",
       liveUrl: "#"
     }
   ];
