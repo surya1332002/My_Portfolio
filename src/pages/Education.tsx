@@ -10,7 +10,7 @@ const Education = () => {
       school: "University of Houston",
       location: "Houston, TX",
       period: "August 2023 – May 2025",
-      status: "Current",
+      status: "Recent",
       gpa: "3.63/4.0",
       description: "Comprehensive program combining engineering principles with advanced data science techniques, machine learning, and statistical analysis.",
       highlights: [

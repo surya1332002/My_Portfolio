@@ -25,7 +25,10 @@ const Skills = () => {
         { name: "Scikit-learn", description: "Classical ML, Model Selection", years: "" },
         { name: "Keras", description: "Rapid Prototyping, Deep Learning", years: "" },
         { name: "LangChain", description: "LLM Applications, RAG Systems", years: "" },
-        { name: "OpenCV", description: "Computer Vision, Image Processing", years: "" }
+        { name: "OpenCV", description: "Computer Vision, Image Processing", years: "" },
+        { name: "FAISS", description: "Similarity Search, Vector Indexing (library, not DB)", years: "" },
+        { name: "OpenAI (API/SDK)", description: "Generative AI, LLM Integration", years: "" },
+        { name: "SHAP", description: "Model Explainability", years: "" }
       ]
     },
     {
@@ -35,18 +38,22 @@ const Skills = () => {
         { name: "Power BI", description: "Business Intelligence, Dashboards", years: "" },
         { name: "Tableau", description: "Data Visualization, Analytics", years: "" },
         { name: "Matplotlib", description: "Python Plotting, Statistical Viz", years: "" },
-        { name: "Seaborn", description: "Statistical Data Visualization", years: "" },
-        { name: "Shap", description: "Advanced Data Visualization", years: "" }
+        { name: "Seaborn", description: "Statistical Data Visualization", years: "" }
       ]
     },
     {
       category: "Tools & Platforms",
       icon: "🛠️",
       skills: [
+        { name: "n8n", description: "Workflow Automation", years: "" },
+        { name: "Notion", description: "Project / Knowledge Management", years: "" },
+        { name: "Slack", description: "Collaboration", years: "" },
+        { name: "ElevenLabs", description: "Voice AI Platform", years: "" },
+        { name: "Streamlit", description: "Data Apps & Deployment", years: "" },
         { name: "GitHub", description: "Version Control, Collaboration", years: "" },
-        { name: "Jupyter", description: "Data Analysis, Prototyping", years: "" },
-        { name: "Google Colab", description: "Cloud Computing, ML Training", years: "" },
-        { name: "Oracle Cloud", description: "Database Management, Computing", years: "" }
+        { name: "Jupyter Notebook", description: "Data Analysis, Prototyping", years: "" },
+        { name: "Google Colab", description: "Cloud ML Training", years: "" },
+        { name: "Oracle Cloud", description: "Cloud Database & Computing", years: "" }
       ]
     },
     {
@@ -54,8 +61,7 @@ const Skills = () => {
       icon: "🗄️",
       skills: [
         { name: "MySQL", description: "Database Design, Optimization", years: "" },
-        { name: "ChromaDB", description: "Vector Database, Embeddings", years: "" },
-        { name: "FAISS", description: "Similarity Search, Vector Indexing", years: "" }
+        { name: "ChromaDB", description: "Vector Database, Embeddings", years: "" }
       ]
     },
     {
@@ -63,11 +69,11 @@ const Skills = () => {
       icon: "🎯",
       skills: [
         { name: "Recommendation Systems", description: "Collaborative Filtering, ML", years: "" },
-        { name: "Natural Language Processing", description: "Text Analysis, Sentiment", years: "" },
+        { name: "Natural Language Processing (NLP)", description: "Text Analysis, Sentiment", years: "" },
         { name: "Computer Vision", description: "Image Classification, Detection", years: "" },
         { name: "Statistical Analysis", description: "Hypothesis Testing, Inference", years: "" },
         { name: "Time Series Analysis", description: "Forecasting, Trend Analysis", years: "" },
-        { name: "A/B Testing", description: "Experimental Design, Analysis", years: "" },
+        { name: "A/B Testing", description: "Experimental Design, Analysis", years: "" }
       ]
     }
   ];

@@ -77,8 +77,8 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
+        <div className="grid lg:grid-cols-3 gap-12">
+          {/* Contact Form
           <Card className="animate-on-scroll bg-neutral-800 border-neutral-700">
             <CardHeader>
               <CardTitle className="text-2xl text-white">Send a Message</CardTitle>
@@ -139,10 +139,11 @@ const Contact = () => {
                 </Button>
               </form>
             </CardContent>
-          </Card>
+          </Card> */}
 
           {/* Contact Information */}
-          <div className="space-y-8 animate-on-scroll" style={{animationDelay: '0.2s'}}>
+          <div className="lg:col-start-2 lg:col-span-1 space-y-8 animate-on-scroll" style={{ animationDelay: '0.2s' }}>
+    {/* Contact Details */}
             {/* Contact Details */}
             <Card className="bg-neutral-800 border-neutral-700">
               <CardHeader>

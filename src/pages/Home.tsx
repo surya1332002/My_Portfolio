@@ -98,6 +98,15 @@ const Home = () => {
               </div>
 
              <div className="flex flex-col sm:flex-row gap-4 pt-8">
+  
+
+  <Button asChild className="bg-red-600 hover:bg-red-700 text-white border-none">
+    <Link to="/experience" className="flex items-center">
+      View Experience
+      <ArrowRight className="w-4 h-4 ml-2" />
+    </Link>
+  </Button>
+
   <Button asChild className="bg-red-600 hover:bg-red-700 text-white border-none">
     <Link to="/projects" className="flex items-center">
       View Projects
@@ -105,7 +114,7 @@ const Home = () => {
     </Link>
   </Button>
 
-  <a href="/SuryaResume_DataScienceGrad.pdf" download className="w-fit">
+  <a href="/After_Reventure_Resume.pdf" download className="w-fit">
     <Button className="bg-red-600 hover:bg-red-700 text-white border-none">
       <Download className="w-4 h-4 mr-2" />
       Download Resume

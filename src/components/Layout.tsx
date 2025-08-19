@@ -63,7 +63,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               </Link>
             ))}
             <a
-  href="/SuryaResume_DataScienceGrad.pdf"
+  href="/After_Reventure_Resume.pdf"
   download
   className="ml-6"
 >
