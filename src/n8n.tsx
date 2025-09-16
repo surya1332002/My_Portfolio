@@ -1,8 +1,12 @@
-const WEBHOOK_URL =
-  'https://reventure-systems.app.n8n.cloud/webhook/pd468837-d52d-440c-a04d-784823703534/chat'; // ✅ your Chat Trigger → Production URL
-const BOT_NAME = 'Surya Assistant'; // ✅ your bot’s display name
+// src/n8n.tsx
+console.log('[n8n.ts] booting…');
 
-// Your dark + red theme
+// 1) EDIT THESE TWO LINES
+const WEBHOOK_URL =
+  'https://reventure-systems.app.n8n.cloud/webhook/pd468837-d52d-440c-a04d-784823703534/chat';
+const BOT_NAME = 'Surya Assistant';
+
+// Color theme
 const THEME = {
   headerBg: '#0b0b0b',
   headerText: '#ffffff',
@@ -21,9 +25,6 @@ const SIZE_KEY = 'n8nChat.size';
 const DEFAULT_SIZE = { width: 420, height: 560 };
 const LIMITS = { minW: 340, minH: 420, maxW: 720, maxH: 900 };
 
-const MAX_TRIES = 60; // ~15s total
-const INTERVAL_MS = 250;
-
 function appendCssOnce() {
   if (document.getElementById('n8n-chat-base-css')) return;
   const link = document.createElement('link');
@@ -31,6 +32,22 @@ function appendCssOnce() {
   link.rel = 'stylesheet';
   link.href = 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css';
   document.head.appendChild(link);
+}
+
+// Try several host selectors (different versions render differently)
+function getHost(): HTMLElement | null {
+  return (
+    document.querySelector('n8n-chat') ||
+    document.querySelector('n8n-chat-widget') ||
+    document.querySelector('.n8n-chat') ||
+    (Array.from(document.querySelectorAll('*')) as HTMLElement[]).find(
+      // fallback: any custom element with a shadowRoot that contains “Powered by n8n”
+      (el) =>
+        (el as any).shadowRoot &&
+        ((el as any).shadowRoot!.textContent || '').toLowerCase().includes('powered by n8n')
+    ) ||
+    null
+  ) as HTMLElement | null;
 }
 
 function selectOne(root: Document | ShadowRoot | Element, sels: string[]) {
@@ -45,13 +62,15 @@ function applyTheme(root: ShadowRoot | Document | Element) {
   if ((root as any).getElementById?.('n8n-custom-theme')) return;
   const style = document.createElement('style');
   (style as any).id = 'n8n-custom-theme';
+
+  // Use broad selectors so it works across widget versions.
   style.textContent = `
+    /* launcher */
     .n8n-launcher, .launcher, button[aria-label="Open chat"] {
       background: ${THEME.launcherBg} !important; color: ${THEME.launcherText} !important;
     }
-    .n8n-container, .container, .panel, .widget, .n8n-chat__panel {
-      border-color: ${THEME.border} !important;
-    }
+
+    /* header */
     .n8n-header, .header, [data-testid="header"] {
       background: ${THEME.headerBg} !important; color: ${THEME.headerText} !important;
       border-bottom: 1px solid ${THEME.border} !important;
@@ -59,19 +78,24 @@ function applyTheme(root: ShadowRoot | Document | Element) {
     .n8n-header .title, .header .title, [data-testid="header-title"] {
       color: ${THEME.headerText} !important;
     }
-    .message.agent, .bot, .message--agent, [data-sender="ai"] .bubble {
+
+    /* messages (agent & user) */
+    [data-sender="ai"] .bubble, .message.agent .bubble, .message--agent .bubble, .bot .bubble {
       background: ${THEME.bubbleBotBg} !important; color: ${THEME.bubbleText} !important; border: 1px solid ${THEME.border} !important;
     }
-    .message.user, .self, .message--user, [data-sender="user"] .bubble {
+    [data-sender="user"] .bubble, .message.user .bubble, .message--user .bubble, .self .bubble {
       background: ${THEME.bubbleUserBg} !important; color: ${THEME.bubbleText} !important; border: 1px solid ${THEME.border} !important;
     }
     .bubble a { color: ${THEME.accent} !important; }
+
+    /* composer / input */
     .composer, .input, [data-testid="composer"] {
       background: ${THEME.inputBg} !important; border-top: 1px solid ${THEME.border} !important;
     }
     .composer textarea, .input textarea, [data-testid="composer"] textarea {
       color: ${THEME.inputText} !important; background: transparent !important;
     }
+
     /* resizer handle */
     .n8n-resizer {
       position: absolute; width: 14px; height: 14px; right: 6px; bottom: 6px;
@@ -109,6 +133,7 @@ function makeResizable(root: ShadowRoot | Document | Element) {
 
   panel.style.position = panel.style.position || 'relative';
 
+  // restore previous size
   try {
     const saved = JSON.parse(localStorage.getItem(SIZE_KEY) || 'null');
     const w = Math.min(Math.max(saved?.width ?? DEFAULT_SIZE.width, LIMITS.minW), LIMITS.maxW);
@@ -130,15 +155,12 @@ function makeResizable(root: ShadowRoot | Document | Element) {
     const onDown = (e: MouseEvent) => {
       e.preventDefault();
       dragging = true;
-      startX = e.clientX;
-      startY = e.clientY;
+      startX = e.clientX; startY = e.clientY;
       const rect = panel.getBoundingClientRect();
-      startW = rect.width;
-      startH = rect.height;
+      startW = rect.width; startH = rect.height;
       window.addEventListener('mousemove', onMove);
       window.addEventListener('mouseup', onUp);
     };
-
     const onMove = (e: MouseEvent) => {
       if (!dragging) return;
       const newW = Math.min(Math.max(startW + (e.clientX - startX), LIMITS.minW), LIMITS.maxW);
@@ -146,7 +168,6 @@ function makeResizable(root: ShadowRoot | Document | Element) {
       panel.style.width = newW + 'px';
       panel.style.height = newH + 'px';
     };
-
     const onUp = () => {
       dragging = false;
       window.removeEventListener('mousemove', onMove);
@@ -154,54 +175,58 @@ function makeResizable(root: ShadowRoot | Document | Element) {
       const rect = panel.getBoundingClientRect();
       localStorage.setItem(SIZE_KEY, JSON.stringify({ width: Math.round(rect.width), height: Math.round(rect.height) }));
     };
-
     handle.addEventListener('mousedown', onDown);
   }
   return true;
 }
 
-function customize(triesLeft = MAX_TRIES) {
-  const host = document.querySelector('.n8n-chat') as HTMLElement | null;
-  if (!host) {
-    if (triesLeft > 0) setTimeout(() => customize(triesLeft - 1), INTERVAL_MS);
-    return;
-  }
+function customizeOnce() {
+  const host = getHost();
+  if (!host) return false;
   const root: any = (host as any).shadowRoot || host;
 
   applyTheme(root);
   ensureBotName(root);
+  makeResizable(root);
 
-  // panel may only exist after opening; keep watching
-  if (!makeResizable(root) && triesLeft > 0) {
-    setTimeout(() => customize(triesLeft - 1), INTERVAL_MS);
-  }
-
-  if (!root.__n8nResizeObserver) {
-    root.__n8nResizeObserver = new MutationObserver(() => {
-      makeResizable(root);
+  // keep things consistent if widget re-renders
+  if (!root.__n8nObserver) {
+    root.__n8nObserver = new MutationObserver(() => {
+      applyTheme(root);
       ensureBotName(root);
+      makeResizable(root);
     });
-    root.__n8nResizeObserver.observe(root, { childList: true, subtree: true });
+    root.__n8nObserver.observe(root, { childList: true, subtree: true });
   }
+
+  console.log('[n8n.ts] customized');
+  return true;
 }
 
 async function boot() {
   appendCssOnce();
 
-  // load the widget bundle and start it
   try {
     const { createChat } = await import('https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js');
     createChat({ webhookUrl: WEBHOOK_URL });
+    console.log('[n8n.ts] widget started');
   } catch (e) {
-    // fail silently to avoid breaking the page if CDN is blocked
     console.error('n8n chat failed to load:', e);
   }
 
-  if (document.readyState === 'complete' || document.readyState === 'interactive') {
-    customize();
-  } else {
-    document.addEventListener('DOMContentLoaded', customize);
+  // Try immediately, then keep trying until host appears
+  if (!customizeOnce()) {
+    const int = setInterval(() => {
+      if (customizeOnce()) clearInterval(int);
+    }, 250);
+
+    // safety timeout: stop trying after 15s
+    setTimeout(() => clearInterval(int), 15000);
   }
+
+  // also watch document; when anything is added, try again (handles SPA + lazy rendering)
+  const bodyObserver = new MutationObserver(() => customizeOnce());
+  bodyObserver.observe(document.body, { childList: true, subtree: true });
 }
 
 boot();
