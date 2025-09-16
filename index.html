@@ -33,12 +33,25 @@
 
     
     <!-- N8N -->
-    <!-- <script type="module" src="/src/n8n.tsx"></script> -->
+    <!-- ✅ Add this: n8n chat widget styles -->
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- ✅ Add this: n8n chat widget script -->
+    <script type="module">
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+      createChat({
+        // 🔁 Replace this with the Production URL shown on your Chat Trigger node in n8n
+        webhookUrl: 'https://reventure-systems.app.n8n.cloud/webhook/pd468837-d52d-440c-a04d-784823703534/chat'
+      });
+    </script>
+
+
   </body>
 </html>
