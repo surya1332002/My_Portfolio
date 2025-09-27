@@ -42,18 +42,11 @@
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
 	createChat({
-      webhookUrl: 'https://reventure-systems.app.n8n.cloud/webhook/2ca7d787-76d9-4fd4-896a-d29006739875/chat',
-      i18n: {
-        en: {
-          translation: {
-            headerTitle: "Surya’s Assistant",
-            subtitle: "Ask me about Surya—his work, projects, and skills.",
-            getStarted: "Start chatting",
-            inputPlaceholder: "Type your question…"
-          }
-        }
-      }
-    });
+    webhookUrl: 'https://reventure-systems.app.n8n.cloud/webhook/2ca7d787-76d9-4fd4-896a-d29006739875/chat',
+    initialMessages: [
+      "Hi! I’m Surya’s personal assistant. Ask me about Surya—his work, projects, and skills."
+    ]
+  });
     </script>
 
 
