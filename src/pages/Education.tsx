@@ -68,8 +68,38 @@ const Education = () => {
       status: "In Progress"
     },
     {
+      name: "AWS Cloud Practitioner Essentials",
+      issuer: "Amazon Web Services",
+      date: "2025",
+      status: "Completed"
+    },
+    {
+      name: "Oracle Cloud Infrastructure 2025 Certified Multicloud Architect Professional",
+      issuer: "OCI (Oracle Cloud Infrastructure)",
+      date: "2025",
+      status: "Completed"
+    },
+    {
+      name: "Oracle AI Vector Search Certified Professional",
+      issuer: "OCI (Oracle Cloud Infrastructure)",
+      date: "2025",
+      status: "Completed"
+    },
+    {
+      name: "Oracle Cloud Infrastructure 2025 Certified Data Science Professional",
+      issuer: "OCI (Oracle Cloud Infrastructure)",
+      date: "2025",
+      status: "Completed"
+    },
+    {
       name: "Oracle Cloud Infrastructure Generative AI Professional ",
       issuer: "Oracle",
+      date: "2024",
+      status: "Completed"
+    },
+    {
+      name: "Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate",
+      issuer: "OCI (Oracle Cloud Infrastructure)",
       date: "2024",
       status: "Completed"
     },
@@ -77,6 +107,24 @@ const Education = () => {
       name: "Machine Learning",
       issuer: "Cognibot",
       date: "2023",
+      status: "Completed"
+    },
+    {
+      name: "Power BI",
+      issuer: "Linkedin Learning",
+      date: "2024",
+      status: "Completed"
+    },
+    {
+      name: "React js",
+      issuer: "Algoxfusion",
+      date: "2022",
+      status: "Completed"
+    },
+    {
+      name: "Html & CSS",
+      issuer: "Udemy",
+      date: "2022",
       status: "Completed"
     }
   ];
@@ -206,19 +254,7 @@ const Education = () => {
           ))}
         </div>
 
-        {/* Achievements Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8 text-white animate-on-scroll">Academic Achievements</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {achievements.map((achievement, index) => (
-              <Card key={index} className="text-center p-6 card-hover animate-on-scroll bg-neutral-900 border-neutral-800" style={{animationDelay: `${index * 0.1}s`}}>
-                <div className="text-4xl mb-4">{achievement.icon}</div>
-                <h3 className="font-semibold mb-2 text-white">{achievement.title}</h3>
-                <p className="text-sm text-neutral-400 body-light">{achievement.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
+
 
         {/* Certifications */}
         <div className="mb-16">
@@ -238,6 +274,20 @@ const Education = () => {
                 <CardContent>
                   <p className="text-neutral-400 body-light">{cert.date}</p>
                 </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Achievements Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center mb-8 text-white animate-on-scroll">Academic Achievements</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {achievements.map((achievement, index) => (
+              <Card key={index} className="text-center p-6 card-hover animate-on-scroll bg-neutral-900 border-neutral-800" style={{animationDelay: `${index * 0.1}s`}}>
+                <div className="text-4xl mb-4">{achievement.icon}</div>
+                <h3 className="font-semibold mb-2 text-white">{achievement.title}</h3>
+                <p className="text-sm text-neutral-400 body-light">{achievement.description}</p>
               </Card>
             ))}
           </div>
