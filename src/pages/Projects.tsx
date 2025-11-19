@@ -10,11 +10,22 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "AI-Powered Fake Job Detector",
+      description: "NLP-based fraud detection system with 99.11% accuracy using DistilBERT, ChromaDB vector database, and RAG-powered explanations.",
+      longDescription: "Built an end-to-end NLP system to detect fraudulent job postings using fine-tuned DistilBERT transformer model. Integrated ChromaDB vector database with 17,880 job embeddings for semantic similarity search. Implemented RAG architecture using OpenAI GPT to provide explainable AI fraud analysis. Deployed production-ready Flask web application with real-time predictions, similar job retrieval, and automatic URL scraping capabilities.",
+      technologies: ["Python", "DistilBERT", "Transformers", "ChromaDB", "Flask", "OpenAI", "Docker", "Sentence-Transformers"],
+      category: "NLP, Deep Learning, RAG",
+      metrics: ["99.11% detection accuracy", "<2 second response time", "17,880 vectorized job postings"],
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop",
+      githubUrl: "https://github.com/surya1332002/fake-job-detector",
+      liveUrl: "https://huggingface.co/spaces/SuryaVardhanReddy/fake-job-detector"
+    },
+    {
       title: "Financial Risk & Customer Analytics Platform",
       description: "Advanced fraud detection system with 97% accuracy using machine learning and LangChain PDF QA capabilities.",
       longDescription: "Developed a comprehensive platform combining fraud detection algorithms with PDF question-answering capabilities. The system processes financial documents, extracts key insights, and provides real-time risk assessments. Integrated Power BI dashboards for executive reporting and customer behavior analysis.",
       technologies: ["Python", "LangChain", "Machine Learning", "Power BI", "PDF Processing"],
-      category: "ML Engineering",
+      category: "ML Engineering, Generative AI",
       metrics: ["97% fraud detection accuracy", "40% reduction in false positives", "Real-time processing"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
       githubUrl: "https://github.com/surya1332002/Financial-Risk-Customer-Analytics-Platform",
@@ -25,7 +36,7 @@ const Projects = () => {
       description: "Comprehensive analytics dashboard analyzing 45+ features with NLP sentiment analysis and Tableau visualizations.",
       longDescription: "Built an end-to-end data pipeline analyzing visitor reviews and experience data. Implemented NLP models for sentiment analysis, created predictive models for visitor satisfaction, and developed interactive Tableau dashboards for stakeholder insights.",
       technologies: ["R", "NLP", "Tableau", "Sentiment Analysis", "Data Visualization"],
-      category: "Data Analytics",
+      category: "Data Analytics, Information Visualization",
       metrics: ["45+ features analyzed", "85% sentiment accuracy", "20% insight improvement"],
       image: "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1750358193/final_1_hlakno.jpg",
       githubUrl: "https://github.com/surya1332002/Disneyland-Review-Analysis-Using-NLP-Tableau-",
