@@ -114,7 +114,7 @@ const Home = () => {
     </Link>
   </Button>
 
-  <a href="/After_Reventure_Resume.pdf" download className="w-fit">
+  <a href="/Surya_Ds_Resume.pdf" download className="w-fit">
     <Button className="bg-red-600 hover:bg-red-700 text-white border-none">
       <Download className="w-4 h-4 mr-2" />
       Download Resume

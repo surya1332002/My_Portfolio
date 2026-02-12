@@ -18,18 +18,18 @@ type ExperienceItem = {
 const Experience = () => {
   const experience: ExperienceItem[] = [
     {
-      title: "AI & Automation Intern",
+      title: "Lead AI & Automation Engineer",
       company: "ReVenture Systems",
       location: "Remote",
       period: "June 2025 – Present",
-      type: "Internship",
+      type: "FullTime",
       description:
         "Building intelligent workflows and AI-driven automation systems for client outreach, voice agents, and data pipelines.",
       achievements: [
-        "Built intelligent workflows that connect voice, email, and document systems to handle client outreach and onboarding with minimal human input.",
-        "Used LangChain, n8n, and ElevenLabs to develop agents that search documents, generate personalized responses, and deliver them through text and voice via API integrations.",
-        "Cut down manual outreach time by 80% by streamlining lead handling from first contact to follow-up.",
-        "Designed internal dashboards in Notion to coordinate tasks, monitor pipeline activity, and keep team updates organized."
+        "Led end to end design of AI powered automation workflows aligned with client use cases, delivering iterative improvements with clear operational impact.",
+        "Engineered scalable n8n based automation systems integrating APIs and LLMs, reducing manual effort by over 80%",
+        "Designed and implemented LangChain based RAG systems using OpenAI and vector databases to extract accurate, context aware answers from contracts and reports.",
+        "Led testing and deployment of production ready workflows with cross functional teams, ensuring reliable performance and successful client adoption."
       ],
       skills: [
         "LangChain",
@@ -39,7 +39,10 @@ const Experience = () => {
         "Prompt Engineering",
         "Workflow Automation",
         "API Integration",
-        "Notion"
+        "Notion",
+        "Supabase",
+        "Vector Databases",
+        "Rag Systems"
       ],
       // ⬇️ Replace this with your own ReVenture image if you have one
       image: "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1755618150/1748289158637_g65yai.jpg",
@@ -47,19 +50,19 @@ const Experience = () => {
       imageCaption: "Collaborating remotely with the ReVenture Systems AI team."
     },
     {
-      title: "Instructional Assistant",
-      company: "University of Houston IT Department (Wifi Team)",
+      title: "Data Analyst (IT Operations)",
+      company: "University of Houston",
       location: "Houston, TX",
-      period: "January 2024 – May 2025",
+      period: "August 2023 – january 2026",
       type: "Part-time",
       description:
         "Supporting IT operations and enhancing technological infrastructure for the university campus.",
       achievements: [
-        "Built Python scripts to automate weekly data collection from 3+ sources (Cape sensors, HPE GreenLake, Aruba Central), saving 3 hours/week of manual effort previously spent on Excel consolidation",
-        "Centralized Wi-Fi usage and signal data for 6,500+ access points into a single Excel file, enabling faster diagnostics of lowperformance zones across the university campus.",
-        "Integrated Excel with Power BI to auto-refresh dashboards used by IT managers in weekly meetings, cutting preparation time from 3–4 hours to under 5 minutes.",
-        "Helped improve Wi-Fi coverage by 20% by identifying poor signal zones and supporting infrastructure upgrades including the installation of new routers in 10+ buildings",
-        "Performed on-site signal testing and designed Wi-Fi layouts for large facilities like the university library, leading to a 30% increase in signal reliability in high-traffic student areas."
+        "Developed Python automation scripts to streamline weekly data collection from 3+ systems, saving 3 hours per week previously spent on manual Excel consolidation.",
+        "Consolidated WiFi usage and signal data for 6,500+ access points into a single dataset, accelerating diagnosis of low performance zones across campus.",
+        "Integrated Excel with Power BI to enable auto refreshing dashboards, reducing weekly reporting preparation from 3–4 hours to under 5 minutes.",
+        "Improved WiFi coverage by 20% by identifying poor signal zones and supporting infrastructure upgrades across 10+ buildings.",
+        "Analysed departmental expenditures and created Excel and Power BI dashboards for the NSM Department of Chemistry, improving budget visibility and audit workflows."
       ],
       skills: [
         "Python",
@@ -69,7 +72,8 @@ const Experience = () => {
         "Automation",
         "Network Administration",
         "Aruba Central",
-        "HPE GreenLake"
+        "HPE GreenLake",
+        "...."
       ],
       image:
         "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1750357769/867a88cc-6758-488e-8cc8-70935e43227a_1_qqa50n.jpg",
