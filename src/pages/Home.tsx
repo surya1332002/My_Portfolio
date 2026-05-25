@@ -9,11 +9,13 @@ const Home = () => {
   const [currentRole, setCurrentRole] = useState(0);
 
   const dynamicRoles = [
-    "AI & Data Science Engineer",
-    "Generative AI", 
-    "LLM Projects",
-    "Dashboards"
-  ];
+  "AI Automation Engineer",
+  "LLM Systems Builder",
+  "Applied GenAI Engineer",
+  "Workflow Orchestration",
+  "AI Agents & RAG Systems",
+  "End-to-End AI Solutions"
+];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -77,7 +79,7 @@ const Home = () => {
             <div className="space-y-8 animate-slide-right order-2 lg:order-2">
               <div className="space-y-6">
                 <div className="text-sm font-medium text-neutral-400 tracking-widest uppercase">
-                  Data Science | ML | AI Systems
+                  AI AUTOMATION | LLM WORKFLOWS | END-TO-END SYSTEM DESIGN
                 </div>
                 
                 <h1 className="display-xl text-white leading-tight">
@@ -88,8 +90,7 @@ const Home = () => {
                 </h1>
                 
                 <div className="text-xl text-neutral-300 font-light max-w-lg">
-                  I work at the intersection of data, code, and curiosity.<br />
-                  I build intelligent systems that extract insights and create measurable impact.
+                  Focused on building AI-powered workflows and automation systems that reduce manual effort and turn complex business processes into scalable solutions.
                 </div>
                 
                 <div className="text-base text-neutral-400 body-light">
@@ -149,23 +150,22 @@ const Home = () => {
               <CardContent className="p-12">
                 <p className="text-xl leading-relaxed text-neutral-300 body-light text-center">
                  <p>
-  I'm <strong>Surya</strong>, a Data Science graduate from the University of Houston with a passion for
-  building systems that make data useful.
+   I'm <strong>Surya</strong>, an AI Automation Engineer and Master's graduate in Engineering Data Science from the University of Houston, focused on building intelligent systems that solve real operational problems.
 </p>
 <br />
 <p>
-  I started my journey blending code and curiosity — turning raw information into insights, interactions, and impact. Whether it's building helpful tools or uncovering hidden patterns, I care about solving real-world problems through clean, scalable solutions.
+   My journey started with data science and machine learning, but over time I became more interested in building complete systems instead of isolated models. I enjoy designing workflows that combine <strong>LLMs</strong>, <strong>APIs</strong>, automation platforms, and user-facing applications into solutions people can actually use every day.
 </p>
 <br />
 <p>
-  Along the way, I've worked with <strong>NLP</strong>, <strong>ML</strong>, <strong>LangChain</strong>, and <strong>Power BI</strong> — but I believe
-  tools only matter when they help people. I'm always learning, iterating, and asking:
-  <em>"What would make this more useful?"</em>
+  At <strong>ReVenture Systems</strong>, I worked on AI automation workflows that streamlined operations across email, documents, and internal business processes. At <strong>Aggregate Technologies (ATI)</strong>, I’ve been building workflow automation and meeting intelligence systems focused on CRM management, task orchestration, and operational efficiency using AI-driven solutions.
 </p>
 <br />
 <p>
-  Beyond code, I value clarity, storytelling, and building technology that’s not just
-  <strong>intelligent</strong>, but also <strong>intuitive</strong>.
+  I’ve built projects involving <strong>RAG pipelines</strong>, <strong>AI-powered support systems</strong>, <strong>workflow orchestration</strong>, <strong>CRM automation</strong>, and intelligent task management systems using tools like <strong>n8n</strong>, <strong>LangChain</strong>, <strong>OpenAI APIs</strong>, and vector databases.
+</p>
+<p>
+  What excites me most is turning complex business processes into scalable AI systems that feel simple, intuitive, and genuinely useful for the people using them.
 </p>
 
                 </p>
@@ -180,7 +180,7 @@ const Home = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {[
-              { label: "Projects Completed", value: "9+" },
+              { label: "Projects Completed", value: "20+" },
               { label: "Research Papers", value: "1" },
               { label: "Technologies", value: "20+" }
             ].map((stat, index) => (

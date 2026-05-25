@@ -18,69 +18,119 @@ type ExperienceItem = {
 const Experience = () => {
   const experience: ExperienceItem[] = [
     {
-      title: "Lead AI & Automation Engineer",
-      company: "ReVenture Systems",
-      location: "Remote",
-      period: "June 2025 – Present",
-      type: "FullTime",
-      description:
-        "Building intelligent workflows and AI-driven automation systems for client outreach, voice agents, and data pipelines.",
-      achievements: [
-        "Led end to end design of AI powered automation workflows aligned with client use cases, delivering iterative improvements with clear operational impact.",
-        "Engineered scalable n8n based automation systems integrating APIs and LLMs, reducing manual effort by over 80%",
-        "Designed and implemented LangChain based RAG systems using OpenAI and vector databases to extract accurate, context aware answers from contracts and reports.",
-        "Led testing and deployment of production ready workflows with cross functional teams, ensuring reliable performance and successful client adoption."
-      ],
-      skills: [
-        "LangChain",
-        "n8n",
-        "ElevenLabs",
-        "Python",
-        "Prompt Engineering",
-        "Workflow Automation",
-        "API Integration",
-        "Notion",
-        "Supabase",
-        "Vector Databases",
-        "Rag Systems"
-      ],
-      // ⬇️ Replace this with your own ReVenture image if you have one
-      image: "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1755618150/1748289158637_g65yai.jpg",
-      imageAlt: "Remote collaboration at ReVenture Systems",
-      imageCaption: "Collaborating remotely with the ReVenture Systems AI team."
-    },
+  title: "Director of Digital Transformations (AI & Automations)",
+  company: "Aggregate Technologies (ATI)",
+  location: "Houston, TX",
+  period: "Apr 2025 – Present",
+  type: "Full-Time",
+  description:
+    "Building AI-powered workflow automation systems focused on CRM orchestration, meeting intelligence, task automation, and operational efficiency.",
+
+  achievements: [
+    "Designed modular AI workflow systems integrating APIs, LLMs, and automation pipelines for operational workflows",
+    "Built automation pipelines using n8n, Salesforce, and OpenAI APIs for CRM updates, lead tracking, and workflow orchestration",
+    "Implemented AI-powered meeting intelligence systems for summarisation, task extraction, and follow-up generation",
+    "Improved operational visibility by centralising workflows, task tracking, and business process automation",
+    "Collaborated directly with non-technical stakeholders to redesign workflows and deliver scalable AI solutions"
+  ],
+
+  skills: [
+    "n8n",
+    "OpenAI APIs",
+    "Workflow Automation",
+    "CRM Automation",
+    "Salesforce",
+    "API Integration",
+    "LLM Workflows",
+    "Meeting Intelligence",
+    "Task Orchestration",
+    "AI Systems"
+  ],
+
+  image:
+    "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1779746256/601b77a6-1fcd-48d2-84fd-aa99ab554e79_uyxwcc.png",
+
+  imageAlt: "Aggregate Technologies automation systems",
+
+  imageCaption:
+    "Designing AI-driven workflow systems for operational automation and CRM orchestration."
+},
     {
-      title: "Data Analyst (IT Operations)",
-      company: "University of Houston",
-      location: "Houston, TX",
-      period: "August 2023 – january 2026",
-      type: "Part-time",
-      description:
-        "Supporting IT operations and enhancing technological infrastructure for the university campus.",
-      achievements: [
-        "Developed Python automation scripts to streamline weekly data collection from 3+ systems, saving 3 hours per week previously spent on manual Excel consolidation.",
-        "Consolidated WiFi usage and signal data for 6,500+ access points into a single dataset, accelerating diagnosis of low performance zones across campus.",
-        "Integrated Excel with Power BI to enable auto refreshing dashboards, reducing weekly reporting preparation from 3–4 hours to under 5 minutes.",
-        "Improved WiFi coverage by 20% by identifying poor signal zones and supporting infrastructure upgrades across 10+ buildings.",
-        "Analysed departmental expenditures and created Excel and Power BI dashboards for the NSM Department of Chemistry, improving budget visibility and audit workflows."
-      ],
-      skills: [
-        "Python",
-        "Excel",
-        "Power BI",
-        "Dashboard Development",
-        "Automation",
-        "Network Administration",
-        "Aruba Central",
-        "HPE GreenLake",
-        "...."
-      ],
-      image:
-        "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1750357769/867a88cc-6758-488e-8cc8-70935e43227a_1_qqa50n.jpg",
-      imageAlt: "Surya with colleagues at University of Houston",
-      imageCaption:
-        "Collaborating with amazing peers at the University of Houston IT Department."
-    }
+  title: "Lead AI & Automation Engineer",
+  company: "ReVenture Systems",
+  location: "Remote",
+  period: "Jun 2025 – Apr 2026",
+  type: "Full-Time",
+
+  description:
+    "Designing and deploying AI automation systems, LLM workflows, and intelligent business process automation solutions for client operations.",
+
+  achievements: [
+    "Designed and deployed AI automation systems for client workflows using APIs, LLMs, and workflow orchestration",
+    "Engineered n8n-based automation pipelines integrating OpenAI and Anthropic Claude APIs",
+    "Built RAG systems using LangChain and vector databases for context-aware document querying",
+    "Led full lifecycle delivery including workflow design, prototyping, deployment, and optimisation",
+    "Collaborated directly with clients to redesign inefficient manual workflows into scalable AI systems"
+  ],
+
+  skills: [
+    "LangChain",
+    "n8n",
+    "OpenAI",
+    "Anthropic Claude",
+    "RAG",
+    "Supabase",
+    "ElevenLabs",
+    "Workflow Automation",
+    "API Integration",
+    "Vector Databases",
+    "AI Agents"
+  ],
+
+  image:
+    "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1755618150/1748289158637_g65yai.jpg",
+
+  imageAlt: "ReVenture Systems AI workflows",
+
+  imageCaption:
+    "Building AI automation systems and intelligent workflow solutions for real-world client operations."
+},
+    {
+  title: "Data & Automation Analyst (IT Operations)",
+  company: "University of Houston",
+  location: "Houston, TX",
+  period: "Aug 2023 – Jan 2026",
+  type: "Part-Time",
+
+  description:
+    "Built automation and operational monitoring systems supporting university IT infrastructure and network operations.",
+
+  achievements: [
+    "Built Python-based automation pipelines for ingesting and consolidating operational data from multiple systems",
+    "Automated reporting and monitoring workflows across campus network infrastructure",
+    "Designed Power BI dashboards with automated refresh for operational monitoring and analysis",
+    "Applied anomaly detection and data analysis techniques to identify infrastructure performance issues"
+  ],
+
+  skills: [
+    "Python",
+    "Power BI",
+    "Data Pipelines",
+    "Operational Monitoring",
+    "Workflow Automation",
+    "Aruba Central",
+    "HPE GreenLake",
+    "Infrastructure Analytics"
+  ],
+
+  image:
+    "https://res.cloudinary.com/dpcfu8ekd/image/upload/v1750357769/867a88cc-6758-488e-8cc8-70935e43227a_1_qqa50n.jpg",
+
+  imageAlt: "University of Houston IT operations",
+
+  imageCaption:
+    "Collaborating with the University of Houston IT operations team on automation and infrastructure monitoring systems."
+}
   ];
 
   return (

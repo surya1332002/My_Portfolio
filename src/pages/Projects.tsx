@@ -10,6 +10,58 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "AI-Powered Live Agent Support System",
+      description:
+        "Production AI-human support system for 24/7 customer query handling, lead protection, and intelligent escalation.",
+      longDescription:
+        "Designed a hybrid AI-human support system using n8n, OpenAI LLMs, Supabase, Google Docs, Microsoft Teams, and Email APIs. Built controlled knowledge-grounded response generation, session tracking, real-time internal notifications, office-hours-based handoff logic, and fallback flows for scheduling and email escalation.",
+      technologies: ["n8n", "OpenAI", "Supabase", "Google Docs", "Microsoft Teams API", "Email APIs"],
+      category: "AI Agents, Workflow Automation",
+      metrics: ["24/7 query handling", "AI-to-human handoff", "Full conversation traceability"],
+      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&h=300&fit=crop",
+      githubUrl: "#",
+      liveUrl: "#",
+    },
+    {
+      title: "AI-Driven Client Intake and Workflow Automation System",
+      description:
+        "LLM-powered client intake and assessment automation system for structured data capture and workflow logging.",
+      longDescription:
+        "Built a chatbot-driven intake system using n8n, OpenAI LLMs, SharePoint, and API integrations. Automated client information capture, assessment processing, structured data storage, and downstream workflow logging while reducing manual onboarding delays.",
+      technologies: ["n8n", "OpenAI", "SharePoint", "APIs", "Workflow Automation"],
+      category: "AI Automation, Data Pipelines",
+      metrics: ["Automated client intake", "Reduced onboarding delays", "Multi-workflow orchestration"],
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=300&fit=crop",
+      githubUrl: "#",
+      liveUrl: "#",
+    },
+    {
+      title: "AI-Powered Email Processing and Response Automation System",
+      description:
+        "Generative AI email automation pipeline with intent classification, semantic retrieval, and context-aware response generation.",
+      longDescription:
+        "Created an event-driven email processing system using n8n, OpenAI LLMs, Pinecone, RAG, and API integrations. The system classifies email intent, retrieves relevant context through vector search, generates business-aligned replies, and routes emails to the correct workflow.",
+      technologies: ["n8n", "OpenAI", "Pinecone", "RAG", "Vector Search", "APIs"],
+      category: "Generative AI, RAG",
+      metrics: ["Real-time email processing", "Intent classification", "Automated response generation"],
+      image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=500&h=300&fit=crop",
+      githubUrl: "#",
+      liveUrl: "#",
+    },
+    {
+      title: "AI-Powered Job Application and Resume Optimisation Platform",
+      description:
+        "AI-powered platform for analysing job descriptions, evaluating candidate fit, and improving resume alignment.",
+      longDescription:
+        "Built an interactive job application assistant using React, TypeScript, Tailwind CSS, webhook-based AI integrations, local storage, and modular state management. Implemented keyword matching, structured feedback, session tracking, and AI-generated optimisation insights.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "AI Workflows", "Webhooks"],
+      category: "Generative AI, Full-Stack",
+      metrics: ["JD analysis", "Keyword matching", "Reusable profile and resume storage"],
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop",
+      githubUrl: "#",
+      liveUrl: "#",
+    },
+    {
       title: "AI-Powered Fake Job Detector",
       description: "NLP-based fraud detection system with 99.11% accuracy using DistilBERT, ChromaDB vector database, and RAG-powered explanations.",
       longDescription: "Built an end-to-end NLP system to detect fraudulent job postings using fine-tuned DistilBERT transformer model. Integrated ChromaDB vector database with 17,880 job embeddings for semantic similarity search. Implemented RAG architecture using OpenAI GPT to provide explainable AI fraud analysis. Deployed production-ready Flask web application with real-time predictions, similar job retrieval, and automatic URL scraping capabilities.",
